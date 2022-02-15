@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+#container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#logo{ 
+  float:left;   /* 왼쪽으로 플로팅 */ 
+  width:auto;   /*  너비 */
+  height:50px;   /* 높이 */
+  margin-left: 20px;
+  background-color: rgb(245, 13, 13);
+}
+
+#logo h1 {
+  font-family: 'Pacifico', cursive;   /*외부 폰트*/
+  font-weight: 700;   /*글자 굵기*/
+  font-size: 30px;   /*글자 크기*/
+  color: black;   /*글자색*/
+  text-shadow: 0 -1px 0 #222; /*그림자 스타일*/
+}
+
+input::-ms-input-placeholder {color:#a8a8a8; }
+input::-webkit-input-placeholder {color:#a8a8a8; }
+input::-moz-input-placeholder {color:#a8a8a8; }
+
+.opt1 {
+  justify-content: center; 
+}
+#box {
+  padding:5px 45px;
+  margin:10px;   
+  background-color:rgba(144, 12, 12, 0.787);   
+}
+#search {
+  margin-top: 30px;
+  display:flex;  /* 플렉스 컨테이너 지정 */
+  background-color:rgba(250, 250, 250, 0);
+  margin-bottom:30px;
+}
+
+/**************************************************************/
+#info {
+  display: flex;
+  width: 80%;
+  height: 600px;
+  background-color: rgb(117, 149, 236);
+  
+}
+#infobox {
+  padding: 20px 150px;
+  background-color: rgba(151, 60, 60, 0.849);
+  margin: 20;
+}
+ul {
+  list-style: none;
+}
+#sidebar {
+  width: 200px;
+  height: 500px;
+  background-color: #ffffff00;
+  float: left;
+  margin-top: 50px;
+}
+
+#SideMenu > ul > li > a {
+  display: block;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: 20px;
+}
+input[id*="main"] {
+  display: none;
+}
+
+input[id*="main"] + label {
+  display: block;
+  padding: 20px;
+  color: #fff;
+  font-weight: 900;
+  background: #104a7a;
+  cursor: pointer;
+  position: relative;
+}
+
+input[id*="main"] + label em {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  margin-top: 15px;
+  display: inline-block;
+  background: url('img/arrow.png') 0 0 no-repeat;
+}
+
+input[id*="main"] + label + ul {
+  max-height: 0;
+  transition: all .355;
+  overflow: hidden;
+  background: #ebf8ff;
+}
+input[id*="main"] + label + ul li {
+  display: block;
+  padding: 20px;
+  font-size: 60px;
+}
+
+input[id*="main"]:checked + label + ul {
+  max-height: 300px;
+}
+
+/********************************************************/
+#post {
+  width: 1600px;
+  height: 500px;
+  background-color: #c0d8ee;
+  margin-left: 300px;
+}
+#gallery{
+  width: 1600px;
+  height: 500px;
+  background-color: rgb(163, 203, 241);
+  margin-left: 300px;
+}
+#footer {
+  width: 100%;
+  height: 100px;
+  background-color: #888888;
+  clear: left;
+}
+/************/
