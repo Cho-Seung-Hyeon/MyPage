@@ -20,11 +20,15 @@
     </header>
 
     <section id="info" class="mid">
-        <div id="infobox"><h2>HI!!</h2></div>
+        <div id="infobox" class="mid">
+          <img src="img/photo1.png" alt="">
+          <img src="img/photo2.png" alt="">
+          <img src="img/photo3.png" alt="">
+        </div>
 
     </section>
 
-    <aside id="sidebar">
+    <aside id="sidebar" class="leftset">
       <div id="SideMenu">
         <input type="checkbox" id="main01">
         <label for="main01" a>STUDY</label>
@@ -54,23 +58,27 @@
       <div id="postbox"><h1>포스팅</h1></div>
     </section>
 
-    <section id="gallery" class="sideset">
-      <div id="gallerybox1">
-        <img src="img/1.jpg" alt=""  height="100%" >
-      </div>
-      
-      <div id="gallerybox2">
-        <img src="img/4.jpg" alt="" height="100%" >
-      </div>
-      <div id="gallerybox3">
-        <img src="img/7.jpg" alt="" height="100%" >
-      </div>
+    <section class="gallery" class="sideset">
+      <ul class="gallerybox">
+        <li><img src="img/1.jpg" width="300px" height="300px" alt=""></li>
+        <li><img src="img/2.jpg" width="300px" height="300px" alt=""></li>
+        <li><img src="img/3.jpg" width="300px" height="300px" alt=""></li>
+        <li><img src="img/4.jpg" width="300px" height="300px" alt=""></li>
+        <li><img src="img/5.jpg" width="300px" height="300px" alt=""></li>
+        <li><img src="img/6.jpg" width="300px" height="300px" alt=""></li>
+        <li><img src="img/7.jpg" width="300px" height="300px" alt=""></li>
+      </ul>
     </section>
+    <p class="controls">
+      <span class="prev">prev</span>
+      <span class="next">next</span>
+    </p>
 
     <footer id="footer" class="mid">
 
     <footer>
   </div>
-  <script src="js/autogallery.js"></script>
+  <script src="js/autoslides.js"></script>
+  <script src="js/slidegallery.js"></script>
 </body>
 </html>
