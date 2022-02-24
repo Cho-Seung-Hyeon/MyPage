@@ -8,15 +8,16 @@
 </head>
 <body>
   <div id="container">
-    <header id="header">
+    <header id="header" class="mid">
       <div id="logo">
         <a href="main.html">
           <h1>CSH</h1>
         </a>
       </div>
-      <div id="search" class="mid">
-        <div id="searchbox"><input type="text" placeholder="검색어 입력"><button>검색</button></div>
-      </div>
+      <form action="http://search.naver.com/search.naver" class="searchbox" class="mid">
+        <input type="text" placeholder="Search" name="query">
+        <input type="submit" value="Search">
+      </form>
     </header>
 
     <section id="info" class="mid">
@@ -31,7 +32,7 @@
     <aside id="sidebar" class="leftset">
       <div id="SideMenu">
         <input type="checkbox" id="main01">
-        <label for="main01" a>STUDY</label>
+        <label for="main01">STUDY</label>
         <ul>
          <li><a href="#">HTML</a></li>
          <li><a href="#">CSS</a></li>
@@ -40,42 +41,72 @@
         <input type="checkbox" id="main02">
         <label for="main02">TRAVEL</label>
         <ul>
-         <li><a href="#">국내</a></li>
-         <li><a href="#">국외</a></li>
+         <li><a href="#">Internal</a></li>
+         <li><a href="#">Abroad</a></li>
         </ul>
         <input type="checkbox" id="main03">
         <label for="main03">FOOD</label>
         <ul>
-         <li><a href="#">한식</a></li>
-         <li><a href="#">양식</a></li>
-         <li><a href="#">일식</a></li>
-         <li><a href="#">중식</a></li>
+         <li><a href="#">Korean</a></li>
+         <li><a href="#">Western</a></li>
+         <li><a href="#">Japanese</a></li>
+         <li><a href="#">Chinese</a></li>
         </ul>
       </div>
     </aside >
 
     <section id="post" class="mid">
-      <div id="postbox"><h1>포스팅</h1></div>
+      <div id="postbox">
+        <img src="img/robot.png" width="300px" height="300px">
+        <div id="textbox">
+          <p><h1>Why do we use it?</h1></br>
+            It is a long established fact that a reader will be distracted by the 
+            readable content of a page when looking at its layout. The point of using 
+            Lorem Ipsum is that it has a more-or-less normal distribution of letters, 
+            as opposed to using 'Content here, content here', making it look like 
+            readable English. Many desktop publishing packages and web page editors now use 
+            Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover 
+            many web sites still in their infancy. Various versions have evolved over the years, 
+            sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        </div>
+      </div>
     </section>
 
-    <section class="gallery" class="sideset">
-      <ul class="gallerybox">
-        <li><img src="img/1.jpg" width="300px" height="300px" alt=""></li>
-        <li><img src="img/2.jpg" width="300px" height="300px" alt=""></li>
-        <li><img src="img/3.jpg" width="300px" height="300px" alt=""></li>
-        <li><img src="img/4.jpg" width="300px" height="300px" alt=""></li>
-        <li><img src="img/5.jpg" width="300px" height="300px" alt=""></li>
-        <li><img src="img/6.jpg" width="300px" height="300px" alt=""></li>
-        <li><img src="img/7.jpg" width="300px" height="300px" alt=""></li>
-      </ul>
-    </section>
+    <div id="layout" class="mid">
+      <section class="gallery" class="sideset">
+        <ul class="gallerybox">
+          <li><img src="img/1.jpg" width="300px" height="300px" alt=""></li>
+          <li><img src="img/2.jpg" width="300px" height="300px" alt=""></li>
+          <li><img src="img/3.jpg" width="300px" height="300px" alt=""></li>
+          <li><img src="img/4.jpg" width="300px" height="300px" alt=""></li>
+          <li><img src="img/5.jpg" width="300px" height="300px" alt=""></li>
+          <li><img src="img/6.jpg" width="300px" height="300px" alt=""></li>
+          <li><img src="img/7.jpg" width="300px" height="300px" alt=""></li>
+        </ul>
+      </section>
+    </div>
+
+
     <p class="controls">
       <span class="prev">prev</span>
       <span class="next">next</span>
     </p>
 
     <footer id="footer" class="mid">
-
+      <div id="bottomMenu">
+        <ul>
+          <li><a href="#">페이지 소개</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">문의하기</a></li>
+        </ul>
+        <div id="sns">
+          <ul>
+            <li><a href="https://www.facebook.com"><img src="img/sns-1.png"></a></li>
+            <li><a href="https://www.youtube.com"><img src="img/sns-2.png"></a></li>
+            <li><a href="https://www.instagram.com"><img src="img/sns-3.png"></a></li>
+          </ul>
+        </div>   
     <footer>
   </div>
   <script src="js/autoslides.js"></script>

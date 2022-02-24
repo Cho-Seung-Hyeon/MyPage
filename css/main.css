@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 * {
   margin:0;
   padding:0;
@@ -10,60 +11,71 @@ a {
 #container {
   margin:0 auto;  /* 화면 중앙에 배치 */
   width:1600px;    /* 너비 */
-  background-color: rgb(255, 233, 233);
+}
+.mid {
+  justify-content: center;
 }
 /*********************************************/
 #header {
   height: 150px;
-  background-color: rgba(70, 216, 216, 0.685);
+  background-color: #1A1A40;
 }
 #logo{ 
   float:left;   /* 왼쪽으로 플로팅 */ 
   width:auto;   /*  너비 */
   height:50px;   /* 높이 */
   margin: 50px;
-  background-color: rgb(245, 13, 13);
+  background-color: rgba(245, 13, 13, 0);
 }
 
 #logo h1 {
   font-family: 'Pacifico', cursive;   /*외부 폰트*/
   font-weight: 700;   /*글자 굵기*/
   font-size: 40px;   /*글자 크기*/
-  color: rgb(0, 0, 0);   /*글자색*/
+  color: rgb(255, 255, 255);   /*글자색*/
   text-shadow: 0 -1px 0 #222; /*그림자 스타일*/
 }
 
-input::-ms-input-placeholder {color:#a8a8a8; }
-input::-webkit-input-placeholder {color:#a8a8a8; }
-input::-moz-input-placeholder {color:#a8a8a8; }
+form.searchbox {
+  width: 500px;
+  position: absolute;
+  top: 8%;
+  margin-left: 550px;
+  text-align: center;
+}
 
-.mid {
-  justify-content: center; 
+form.searchbox input[type=text] {
+  background-color: #fff;
+  width: 360px;
+  padding: 10px;
+  border-radius: 30px 0 0 30px;
+  border: none;
 }
-#searchbox {
-  padding:5px 45px;
-  margin: 60px;   
-  background-color:rgba(255, 255, 255, 0);   
-}
-#search {
-  display:flex;  /* 플렉스 컨테이너 지정 */
-  background-color:rgba(0, 0, 0, 0);
-  margin-bottom:30px;
-}
+form.searchbox input[type=submit] {
+  background-color: orange;
+  border-radius: 0 25px 25px 0;
+  padding: 10px;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  margin-left: -6px;
+} 
 
 /**************************************************************/
 
 #info {
   display: flex;
   height: 400px;
-  background-color: rgba(117, 149, 236, 0);
+  background-color: #1A1A40;
   
 }
 #infobox {
   width: 1300px;
   height: 400px;
   overflow: hidden;
-  background-color: rgba(151, 60, 60, 0.849);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: rgba(151, 60, 60, 0);
 }
 #infobox > img {
   width: 100%;
@@ -75,7 +87,7 @@ ul {
   list-style: none;
 }
 .leftset {
-  justify-content: flex-start;
+  justify-content: flex-start; /*페이지 사이즈가 변해도 항상 왼쪽 위치*/
 }
 
 #sidebar {
@@ -105,12 +117,10 @@ input[id*="main"] + label {
   color: #fff;
   font-size: 20px;
   font-weight: 700;
-  background: #104a7a;
+  background: #1A1A40;
   cursor: pointer;
   position: relative;
 }
-
-
 
 input[id*="main"] + label + ul {
   max-height: 0;
@@ -133,14 +143,24 @@ input[id*="main"]:checked + label + ul {
   height: 500px;
   background-color: #c0d8eee0;
   margin-right: 150px;
-
 }
 #postbox {
-  width: 800px;
-  height: auto;
-  background-color: rgba(18, 131, 106, 0);
-  margin-left: 10px;
+  width: 1100px;
+  height:400px ;
+  background-color: rgba(18, 131, 107, 0.671);
+  border-radius: 30px;
+  padding-top: 50px;
+  padding-left: 50px;
+  margin-top: 50px;
 }
+#textbox {
+  background-color: rgba(255, 255, 255, 0);
+  width: 700px;
+  float: right;
+  margin-top: 30px;
+  margin-right: 30px;
+}
+
 /**********************************/
 li{
   list-style: none;
@@ -148,14 +168,23 @@ li{
 .sideset {
   justify-content: space-around;
 }
+#layout {
+  width: 1300px;
+  height: 350px;
+  margin-left: 150px;
+  padding-top: 25px;
+  background-color: #EEEEEE;
+  border-radius: 0 0 30px 30px;
+
+}
 .gallery{
-  background-color: rgba(228, 55, 55, 0);
+  background-color: rgba(226, 8, 8, 0);
   position: relative;
   width: 1000px;
   height: 300px;
-  margin-top: 20px;
   overflow: hidden;
-  margin-left: 300px;
+  margin-left: 150px;
+  border-radius: 30px 0 30px 0;
 }
 .gallerybox{
   position: absolute;
@@ -167,23 +196,57 @@ li{
   float: left;
   margin-right: 50px;
 }
-.controls {
+.controls  {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.controls span{
-  background-color: #333;
-  color: #fff;
+.prev {
+  border-radius: 30px 0 0 30px;
+  background-color: #398AB9;
+  color: rgb(255, 255, 255);
   padding: 10px 20px;
   margin: 0 10px;
+  font-weight: 1000;
+}
+.next {
+  border-radius: 0 30px 30px 0;
+  background-color: #1C658C;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  margin: 0 10px;  
+  font-weight: 1000;
+
 }
 
 /********************************/
-#footer {
-  display: flex;
-  height: 50px;
-  background-color: #000000;
-  clear: left;
+footer{   
+  background-color: #1A1A40;
+  width:100%;   /* 너비 */
+  height:50px;  /* 높이 */
 }
+#bottomMenu{
+  width:1000px;
+  height: 20px;
+  position: relative;
+}
+#bottomMenu ul li{
+  float:left;  /* 가로로 배치 */ 
+  padding: 10px 40px;
+}
+#bottomMenu ul li:last-child{
+  border:none;  /* 마지막 항목에는 오른쪽 테두리 없음 */  
+}
+#bottomMenu ul li a, #bottomMenu ul li a:visited {  
+  font-size:15px;  /* 글자 크기 */ 
+  color:rgb(255, 255, 255);   /* 글자 색 */ 
+}
+#sns {
+  background-color: rgb(35, 76, 190); 
+  right:0;  /* 오른쪽 끝에 배치 */ 
+}
+#sns ul li{
+  border:none;  /* 테두리 없이 */ 
+  padding: 10px;
+} 
 /************/

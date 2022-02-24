@@ -1,69 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 * {
-  margin:0;
-  padding:0;
-  box-sizing: border-box;
+  margin:0;   /* 마진 리셋 */
+  padding:0;   /* 패딩 리셋 */
+  box-sizing: border-box;   /* 박스 영역은 테두리까지 */ 
+}
+a {
+  text-decoration:none;  /* 텍스트 링크 밑줄 없애기 */ 
+}
+ul {
+  list-style: none;
 }
 #container {
-  width: 2000px;
+  margin:0 auto;  /* 화면 중앙에 배치 */
+  background-color: #1a1a4000;
+}
+.mid {
+  justify-content: center;
+}
+
+/*******************************/
+#header {
+  width: 1900px;
+  background-color: #e0dce900;
+  height: 100px;
   margin: 0 auto;
 }
-#header {
-  width: 100%;
-  height: 120px;
-  background-color: #b0c6f5;
-}
 #logo{ 
-  float:left;   /* 왼쪽으로 플로팅 */ 
-  width:250px;   /*  너비 */ 
-  height:100px;   /* 높이 */
-  background-color:rgb(129, 143, 224);  
+  float:left;  
+  width:auto;   /*  너비 */
+  height:40px;   /* 높이 */
+  background-color: #27008200;
+  margin: 30px 50px;
+}
+
+#logo h1 {
+  font-family: 'Pacifico', cursive;   /*외부 폰트*/
+  font-weight: 700;   /*글자 굵기*/
+  font-size: 35px;   /*글자 크기*/
+  color: #270082;   /*글자색*/
+  text-shadow: 0 -1px 0 #222; /*그림자 스타일*/
 }
 
 nav{  
-  float:right;   /* 오른쪽으로 플로팅 */
-  width:900px;   /*   너비 */  
-  height:70px;   /* 메뉴 영역 높이 */ 
-  background-color:rgb(20, 62, 151);  
-  margin-top: 45px;
-  margin-right: 150px;
+  background-color: rgba(0, 119, 204, 0);
+  float: right;
+  width: 1000px;;   /*   너비 */  
+  height: 100px;   /* 메뉴 영역 높이 */  
+  margin-right: 500px;
+  padding-top:40px;  /* 메뉴를 아래로 내리기 위해 */  
 }
 
-input::-ms-input-placeholder {color:#a8a8a8; }
-input::-webkit-input-placeholder {color:#a8a8a8; }
-input::-moz-input-placeholder {color:#a8a8a8; }
-
-#search {
-  height: 70px;
-  width: 2000px;
-  border: 1px solid #161e6d;
-  background: #161e6d;
+#topMenu > li {
+  float:left;  /* 메뉴 항목을 왼쪽으로 플로팅 */ 
+  position: relative;  /* 서브 메뉴를 absolute로 하기 위해, 이 부분을 relative로 */  
+}
+#topMenu > li > a{
+  display:block;  /* 링크 텍스트는 블록으로 */ 
   align-items: center;
-  margin-top: 20px;
+  color:rgb(0, 0, 0);  /* 글자 색 */
+  font-weight:1000;  /* 글자 굵기 */
+  text-shadow:0 1px rgb(0, 2, 3);  /* 그림자 추가 */
+  padding: 19px  134px;  /* 패딩 */ 
+  background-color: rgba(127, 255, 212, 0);
+}
+#topMenu > li > a > span {
+  font-size : 0.8em;   /* 서브 메뉴가 있는 항목에 화살표 표시 */   
+}
+#topMenu > li > a:hover {
+  color:#270082;  /* 마우스 오버하면 색상 바뀜 */ 
+  text-shadow:0 -1px #07c;  /* 글자가 너무 굵어지지 않도록 */
 }
 
+#topMenu > li > ul { /* 서브 메뉴 스타일 */
+  display: none;  /* 서브 메뉴 처음에는 화면에 안 보이게 */ 
+  position:absolute;  /* 서브 메뉴 포지셔닝 */ 
+  width:160px;
+  background:rgb(255, 255, 255);  /* 슬라이드 쇼 비치도록 배경 색 조절 */
+  left:90px;     
+}
+#topMenu > li > ul > li {    
+  padding:10px 10px 10px 30px;  /* 서브 메뉴 항목 */
+}
+#topMenu > li > ul > li > a { 
+  font-size:17px;
+  padding:10px;
+  color:#270082;  
+  font-weight: 1000;
+}
+#topMenu > li:hover > ul {
+  display: block;  /* 메인 메뉴 항목 위로 오버하면 서브 메뉴 표시 */
+  z-index:10; /* 슬라이드 쇼에 가리지 않게 조절 */ 
+  border-radius: 0 0 10px 10px; 
+  border: solid 1px black;
+}
+#topMenu > li > ul > li > a:hover {
+  color:#270082;  /* 서브 메뉴 마우스 오버하면 색상 바뀜 */   
+} 
 
+/***********************************/
+#search_section {
+  display: flex;
+  background-color:#1a1a40;
+}
+form.searchbox {
+  padding:5px 40px;
+  background-color: #ff000000;
+  margin-top: 80px;
+}
 
-#html {
-  width: 1600px;
-  height: 500px;
-  background-color: #c0d8ee;
-  margin-left: 200px;
+form.searchbox input[type=text] {
+  background-color: #fff;
+  width: 360px;
+  padding: 10px;
+  border-radius: 30px 0 0 30px;
+  border: none;
 }
-#css{
-  width: 1600px;
-  height: 500px;
-  background-color: rgb(163, 203, 241);
-  margin-left: 200px;
+form.searchbox input[type=submit] {
+  background-color: #FA58B6;
+  border-radius: 0 25px 25px 0;
+  padding: 10px;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  margin-left: -6px;
+} 
+/********************************/
+
+.contents {
+  display:flex;  /* 플렉스 컨테이너 지정 */
+  background-color: #1a1a40;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  flex-wrap: wrap;  
+  justify-content: space-around;
 }
-#js{
-  width: 1600px;
-  height: 500px;
-  background-color: rgb(10, 132, 247);
-  margin-left: 200px;
+.content {
+  height: 550px;
+  width: 450px;
+  margin:5px;   
+  border-radius: 30px;
+  position: relative;
+  display: inline-block;
 }
-#footer {
+.content img {
+  border-radius: 30px;
+}
+.content span.text {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  transform: translateY(-50%);
+  display: none;
   width: 100%;
-  height: 100px;
-  background-color: #888888;
-  clear: left;
+  font-size: 70px;
+  color: #1a1a40;
+  font-weight: 900;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
 }
+.content::before, .content::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 95%;
+  height: 95%;
+  transform: translate(-50%, -50%);
+  transition: all .8s;
+  background-color: rgba(1, 1, 10, 0);
+  border-radius: 30px;
+}
+
+.content::before{
+  border-top: 4px solid #1a1a40;
+  border-bottom: 4px solid #1a1a40;
+  width: 0%;
+} 
+.content::after {
+  border-left: 4px solid #1a1a40;
+  border-right: 4px solid #1a1a40;
+  height: 0;
+}
+.content:hover span.text {display: block;}
+.content:hover::before { width: 95%;}
+.content:hover::after {height: 95%;}
+/**************************************************/
+footer{   
+  background-color: #1a1a40;
+  width:100%;   /* 너비 */
+  height:100px;  /* 높이 */
+}
+#bottomMenu{
+  padding-top: 20px;
+  width:1000px;
+  height: 20px;
+  position: relative;
+}
+#bottomMenu ul li{
+  float:left;  /* 가로로 배치 */ 
+  padding: 10px 40px;
+}
+#bottomMenu ul li:last-child{
+  border:none;  /* 마지막 항목에는 오른쪽 테두리 없음 */  
+}
+#bottomMenu ul li a, #bottomMenu ul li a:visited {  
+  font-size:15px;  /* 글자 크기 */ 
+  color:rgb(255, 255, 255);   /* 글자 색 */ 
+}
+#sns {
+  background-color: #1a1a40; 
+  right:0;  /* 오른쪽 끝에 배치 */ 
+}
+#sns ul li{
+  border:none;  /* 테두리 없이 */ 
+  padding: 10px;
+} 
