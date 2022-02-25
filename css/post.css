@@ -42,6 +42,7 @@ ul {
   margin: 0 auto;
   background-color:#a4a4ec00;
   padding-right: 150px;
+  padding-bottom: 20px;
 }
 form.searchbox {
   padding: 10px 40px;
@@ -65,4 +66,70 @@ form.searchbox input[type=submit] {
   color: rgb(255, 255, 255);
   font-weight: 400;
   margin-left: -6px;
+} 
+
+input[id="menuicon"] {display: none; height: 500px;}
+input[id="menuicon"] + label{display: block; margin: 30px; width: 40px; height: 30px; position: relative; cursor: pointer;}
+input[id="menuicon"] + label span {display: block; position: absolute; width: 100%; height: 5px; border-radius: 30px; background: #000; cursor: pointer;}
+input[id="menuicon"] + label span:nth-child(1) {top:0;}
+input[id="menuicon"] + label span:nth-child(2) {top: 50%; transform: translateY(-50%);}
+input[id="menuicon"] + label span:nth-child(3) {bottom:0;}
+input[id="menuicon"]:checked + label {z-index: 2;}
+input[id="menuicon"]:checked + label span {background: rgb(0, 0, 0);}
+input[id="menuicon"]:checked + label span:nth-child(1) {top: 50%; transform: translateY(-50%) rotate(45deg);}
+input[id="menuicon"]:checked + label span:nth-child(2) {opacity: 0;}
+input[id="menuicon"]:checked + label span:nth-child(3) {bottom: 50%; transform: translateY(50%) rotate(-45deg);}
+
+.sidebar {width: 300px; height: 90%; background: #1a1a4065; position: fixed; top: 115px; left: -300px; z-index: 1; transition: all .35s;}
+input[id="menuicon"]:checked + label + div {left: 0;}
+
+.menu > li > a {
+  background-color: white;
+}
+/************************************************/
+#post {
+  background-color: #df901000;
+  display: flex;
+  text-align: center;
+
+}
+.textbox {
+  width: 800px;
+  text-align: center;
+  background-color: #a0538000;
+  margin: 0 auto;
+}
+.textbox > h1 {
+  font-size: xxx-large;
+}
+/*******************************************/
+footer{   
+  background-color: #1a1a40;
+  width:100%;   /* 너비 */
+  height:80px;  /* 높이 */
+}
+#bottomMenu{
+  padding-top: 20px;
+  width:1000px;
+  height: 15px;
+  position: relative;
+}
+#bottomMenu ul li{
+  float:left;  /* 가로로 배치 */ 
+  padding: 10px 40px;
+}
+#bottomMenu ul li:last-child{
+  border:none;  /* 마지막 항목에는 오른쪽 테두리 없음 */  
+}
+#bottomMenu ul li a, #bottomMenu ul li a:visited {  
+  font-size:15px;  /* 글자 크기 */ 
+  color:rgb(255, 255, 255);   /* 글자 색 */ 
+}
+#sns {
+  background-color: #1a1a40; 
+  right:0;  /* 오른쪽 끝에 배치 */ 
+}
+#sns ul li{
+  border:none;  /* 테두리 없이 */ 
+  padding: 10px;
 } 
