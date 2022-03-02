@@ -69,8 +69,8 @@ form.searchbox input[type=submit] {
 } 
 
 input[id="menuicon"] {display: none; height: 500px;}
-input[id="menuicon"] + label{display: block; margin: 30px; width: 40px; height: 30px; position: relative; cursor: pointer;}
-input[id="menuicon"] + label span {display: block; position: absolute; width: 100%; height: 5px; border-radius: 30px; background: #000; cursor: pointer;}
+input[id="menuicon"] + label{display: block; margin: 30px; width: 40px; height: 30px; position: fixed;  cursor: pointer;}
+input[id="menuicon"] + label span {display: block; position: absolute; width: 100%; height: 5px; border-radius: 30px; background: #000; transition: all .35s;}
 input[id="menuicon"] + label span:nth-child(1) {top:0;}
 input[id="menuicon"] + label span:nth-child(2) {top: 50%; transform: translateY(-50%);}
 input[id="menuicon"] + label span:nth-child(3) {bottom:0;}
@@ -80,11 +80,29 @@ input[id="menuicon"]:checked + label span:nth-child(1) {top: 50%; transform: tra
 input[id="menuicon"]:checked + label span:nth-child(2) {opacity: 0;}
 input[id="menuicon"]:checked + label span:nth-child(3) {bottom: 50%; transform: translateY(50%) rotate(-45deg);}
 
-.sidebar {width: 300px; height: 90%; background: #1a1a4065; position: fixed; top: 115px; left: -300px; z-index: 1; transition: all .35s;}
+.sidebar {width: 250px; height: 90%; background: #1a1a4065; position: fixed; left: -300px; z-index: 1; transition: all .35s;}
 input[id="menuicon"]:checked + label + div {left: 0;}
 
-.menu > li > a {
-  background-color: white;
+#menu {
+  margin-top: 70px;
+}
+#menu > li {
+  margin-top: 20px;
+  padding-top: 25px;
+  text-align: center;
+  height: 70px;
+}
+#menu > li > a {
+  background-color: rgba(255, 255, 255, 0);
+  font-size: large;
+  font-weight: 600;
+}
+#menu > li:hover {
+  background-color: #1A1A40;
+}
+
+#menu > li:hover > a {
+  color: white;
 }
 /************************************************/
 #post {
