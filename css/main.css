@@ -83,82 +83,86 @@ form.searchbox input[type=submit] {
   object-fit: cover;
 }
 /**************************************************************/
-ul {
-  list-style: none;
-}
-.leftset {
-  justify-content: flex-start; /*페이지 사이즈가 변해도 항상 왼쪽 위치*/
-}
-
-#sidebar {
-  display: flex;
-  height: 800px;
+nav{  
+  background-color: rgba(0, 119, 204, 0);
+  width: 300px;;   /*   너비 */  
+  height: 100px;   /* 메뉴 영역 높이 */  
   float: left;
 }
-#SideMenu {
-  width: 300px;
-  height: 500px;
 
+#topMenu > li {
+  position: relative;  /* 서브 메뉴를 absolute로 하기 위해, 이 부분을 relative로 */  
+}
+#topMenu > li > a{
+  display:block;  /* 링크 텍스트는 블록으로 */ 
+  text-align: center;
+  color:rgb(255, 255, 255);  /* 내비게이션 대표 카테고리 글자색 */
+  font-weight:1000;  /* 글자 굵기 */
+  text-shadow:0 1px rgb(0, 2, 3);  /* 그림자 추가 */
+  padding: 25px  20px;  /* 패딩 */ 
+  background-color: #1A1A40;
 }
 
-#SideMenu > ul > li > a {
-  display: block;
-  color: rgb(0, 0, 0);
+#topMenu > li > a:hover {
+  color:orange;  /* 마우스 오버하면 색상 바뀜 */ 
+    /* 글자가 너무 굵어지지 않도록 */
+}
+
+#topMenu > li > ul { /* 서브 메뉴 스타일 */
+  display: none;  /* 서브 메뉴 처음에는 화면에 안 보이게 */ 
+  position:absolute;  /* 서브 메뉴 포지셔닝 */ 
+  width:300px;
+  background:orange; 
+  border-radius: 0 0 10px 10px;
+}
+#topMenu > li > ul > li {    
+    padding: 20px 0;
+   text-align: center;
+}
+#topMenu > li > ul > li > a { 
+  font-size:18px;
+  padding:10px;
+  color:#270082;  
   font-weight: 1000;
-  font-size: 20px;
 }
-input[id*="main"] {
-  display: none;
+#topMenu > li:hover > ul {
+  display: block;  /* 메인 메뉴 항목 위로 오버하면 서브 메뉴 표시 */
+  z-index: 10;  /* 슬라이드 쇼에 가리지 않게 조절 */ 
 }
-
-input[id*="main"] + label {
-  display: block;
-  padding: 20px;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 700;
-  background: #1A1A40;
-  cursor: pointer;
-  position: relative;
+#first:hover {
+  margin-bottom: 180px;
 }
-
-input[id*="main"] + label + ul {
-  max-height: 0;
-  transition: all .355;
-  overflow: hidden;
-  background: #ebf8ff;
+#second:hover {
+  margin-bottom: 120px;
 }
-input[id*="main"] + label + ul li {
-  display: block;
-  padding: 15px;
-}
-
-input[id*="main"]:checked + label + ul {
-  max-height: 300px;
-}
+#topMenu > li > ul > li:hover {
+  background-color: #1a1a4031;
+  border-radius: 0 0 10px 10px;
+} 
 
 /********************************************************/
 #post {
   display: flex;
   height: 500px;
   background-color: #c0d8eee0;
-  margin-right: 300px;
+  width: 1300px;
 }
 #postbox {
-  width: 1100px;
+  width: 1000px;
   height:400px ;
   background-color: rgba(18, 131, 107, 0.671);
-  border-radius: 30px;
-  padding-top: 50px;
   margin-top: 50px;
-  padding-left: 50px;
+  padding-top: 65px;
+  padding-left: 30px;
+  border-radius: 30px;
+  float: right;
 }
 #textbox {
-  background-color: rgba(255, 255, 255, 0);
-  width: 700px;
+  background-color: rgba(5, 4, 4, 0);
+  width: 600px;
   float: right;
-  margin-top: 30px;
-  padding-right: 50px;
+  padding-right: 120px;
+  margin-right: 50px;
 }
 
 /**********************************/
